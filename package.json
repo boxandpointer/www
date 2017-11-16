@@ -1,0 +1,17 @@
+{
+  "name": "@boxandpointer/www",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run clean && mkdir dist && npm run build:html && npm run build:assets && find dist -empty -type d -delete",
+    "build:html": "pug --out dist src && find dist -name _*.html -delete",
+    "build:assets": "cp -r src/. dist && find dist -name *.pug -delete",
+    "clean": "rm -rf dist",
+    "deploy": "npm run build && cd dist && surge",
+    "serve": "serve dist"
+  },
+  "devDependencies": {
+    "pug": "^2.0.0-rc.4",
+    "serve": "^6.4.1",
+    "surge": "^0.19.0"
+  }
+}

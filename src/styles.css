@@ -1,0 +1,18 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+a[href] {
+  text-decoration: none;
+  border-bottom: solid 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #222;
+}
+
+p {
+  line-height: 1.44444;
+  color: #444;
+}
